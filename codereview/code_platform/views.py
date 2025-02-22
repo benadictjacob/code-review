@@ -14,7 +14,7 @@ def upload_code(request):
         content = request.FILES.get("content").read().decode('utf-8')
         CodeFile.objects.create(name=name, content=content)
         code_files = CodeFile.objects.all()
-        return render(request, "upload.html", {"code_files": code_files})
+        return redirect('display')
     return render(request, "user.html")
 
 def display_code(request):
