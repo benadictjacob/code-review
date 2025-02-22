@@ -1,0 +1,9 @@
+<h1>Code Reviews</h1>
+    <ul>
+      {% for code_file in code_files %}
+      <li>
+        <h2>{{ code_file.name }}</h2>
+        <pre>{{ code_file.content }}</pre>
+      </li>
+      {% endfor %}
+    </ul>
