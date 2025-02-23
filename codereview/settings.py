@@ -1,5 +1,7 @@
 import os
 from pathlib import Path
+import sys
+sys.path.append(r'C:/Users/VICTUS/project_foss/localGPT')
 
 # Define the BASE_DIR variable
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -45,3 +47,7 @@ TEMPLATES = [
         },
     },
 ]
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+localgpt_path = os.path.join(BASE_DIR, 'localGPT')
+sys.path.append(localgpt_path)

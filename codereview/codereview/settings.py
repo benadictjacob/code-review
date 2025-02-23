@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'code_platform',
     'members',
+    'localgpt_integration',
+     # Add Django REST Framework
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
