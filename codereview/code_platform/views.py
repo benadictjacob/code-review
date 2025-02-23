@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .models import CodeFile
 from localgpt_integration.preprocessing import handle_uploaded_file, generate_description
 from django.http import JsonResponse
-
+import re
 def display(request):
     return render(request, "user.html")
 
@@ -31,10 +31,11 @@ def upload_code(request):
             file_path = handle_uploaded_file(content, name)
 
             # Generate description dynamically based on content
-            query = f"Analyze the following code and explain its functionality + generate a discription + show if there is some error and explain the error in the code +genralize the veriables  :\n\n{content_str}"
+            query = f"Analyze the following code and   generate a discription (similar to  read  me file ) + show if there is some error and explain the error in the code +make the veriable more under standable and in the response headings and spaces should be added to make the response more clear  and dont put slash n in the discription :\n\n{content_str}"
             description = generate_description(query)
-
-            return JsonResponse({"description": description})
+            cleaned_description = description.replace("\u00a0", " ", )
+            
+            return JsonResponse({"description": cleaned_description})
 
         except Exception as e:
             return JsonResponse({"error": str(e)}, status=500)

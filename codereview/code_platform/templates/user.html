@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <title>User Page</title>
   </head>
+  
   <body>
+    
     <h1>Upload Code</h1>
     <form method="post" action="{% url 'upload' %}" enctype="multipart/form-data">
       {% csrf_token %}
@@ -28,3 +30,5 @@
     </ul>
   </body>
 </html>
+
+
