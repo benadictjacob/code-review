@@ -3,8 +3,7 @@ Our project is a FOSS-compliant Code Review Platform using local GPT models and 
 
 Implementation Video
 Watch our comprehensive implementation demonstration that showcases the complete functionality of this FOSS-compliant Code Review Platform:
-
-🎥 Implementation Demo Video
+🎥 [Implementation Demo Video](https://youtu.be/KkYbPWbMy5A)**
 
 What you'll see in this video:
 
@@ -15,11 +14,10 @@ Automated documentation generation features
 Code readability analysis and suggestions
 Collaboration tools and workflow demonstration
 Privacy-focused operation without external API dependencies
-Real-time code review scenarios and use cases
-Duration: [XX minutes] | Quality: HD
+Real-time code review scenarios and use case
 
 This walkthrough provides everything you need to understand how the platform works and how to get started with your own code review automation setup.
 
 License
-This project is licensed under the MIT License. See the [LICENSE] file for details.
+This project is licensed under the MIT License. 
 
